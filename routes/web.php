@@ -21,5 +21,9 @@ Route::middleware(['auth', 'role:admin'])->get('/admin', function () {
     return 'Admin Panel';
 });
 
+Route::middleware(['auth', 'role:admin'])->get('/admin', function () {
+    return view('admin.dashboard');
+});
+
 
 require __DIR__ . '/auth.php';
